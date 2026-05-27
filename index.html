@@ -107,9 +107,12 @@ nav a:hover{
 }
 
 .small-text{
+   position:relative;
+   left:0;
+   top:0;
     color:#888;
     margin-bottom:20px;
-    letter-spacing:2px;
+    letter-spacing:4px;
 }
 
 .big-text{
@@ -123,43 +126,33 @@ nav a:hover{
 }
 
 .custom-name{
-    margin-top:30px;
-
     display:flex;
     flex-direction:column;
     gap:10px;
+   margin:20px 0;
 }
 
 .custom-name span{
-    font-size:clamp(30px,5vw,60px);
+    font-size:clamp(40px,7vw,80px);
     font-weight:700;
     color:#d6cbb5;
-    opacity:0;
-}
-
-.nama-kiri{
-    animation:slideLeft 1s ease forwards;
-}
-
-.nama-kanan-atas{
-    animation:slideRight 1s ease forwards;
-    animation-delay:0.5s;
-}
-
-.nama-kanan-bawah{
-    animation:slideUp 1s ease forwards;
-    animation-delay:1s;
+    animation:slidelft 1s ease forwards;
 }
 
 .title{
-    margin-top:25px;
+    position:relative;
+   left:0;
+   top:0;
+   margin:20px 0;
     color:#ccc;
     font-size:clamp(14px,2vw,20px);
 }
 
 .hero-info{
-    margin-top:40px;
-
+    position:relative;
+   lef:0;
+   bottom:0;
+   margin-top:30px;
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -599,47 +592,48 @@ nav a:hover{
 <section id="home" class="hero">
 <div class="hero-container container">
 
-<div class="hero-left">
+    <!-- KIRI -->
+    <div class="hero-left">
 
-<p class="small-text">Creative Portfolio</p>
+        <p class="small-text">Creative Portfolio</p>
 
-<h1 class="big-text">PORTFOLIO</h1>
+        <h1 class="big-text">PORTFOLIO</h1>
 
-<div class="custom-name">
-<span class="nama-kiri">CHANDRA</span>
-<span class="nama-kanan-atas">SETIADI</span>
-<span class="nama-kanan-bawah">SEMBIRING</span>
-</div>
+        <div class="custom-name">
+            <span class="nama-kiri">CHANDRA</span>
+            <span class="nama-kanan-atas">SETIADI</span>
+            <span class="nama-kanan-bawah">SEMBIRING</span>
+        </div>
 
-<p class="title">Undergraduate Engineering Manufacturing</p>
+        <p class="title">Undergraduate Engineering Manufacturing</p>
 
-<div class="hero-info">
+        <div class="hero-info">
 
-<a href="tel:0895321238514" class="info-item">
-<i class="fas fa-phone"></i>
-<span>0895321238514</span>
-</a>
+            <a href="tel:0895321238514" class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>0895321238514</span>
+            </a>
 
-<a href="https://www.linkedin.com/in/chandra-setiadi-sembiring-309343288" target="_blank" class="info-item">
-<i class="fab fa-linkedin"></i>
-<span>LinkedIn Profile</span>
-</a>
+            <a href="https://www.linkedin.com/in/chandra-setiadi-sembiring-309343288" target="_blank" class="info-item">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn Profile</span>
+            </a>
 
-<a href="mailto:sembiringchandra6@gmail.com" class="info-item">
-<i class="fas fa-envelope"></i>
-<span>sembiringchandra6@gmail.com</span>
-</a>
+            <a href="mailto:sembiringchandra6@gmail.com" class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>sembiringchandra6@gmail.com</span>
+            </a>
 
-</div>
-</div>
+        </div>
+    </div>
 
-<div class="hero-image">
-<img src="foto-back.png" alt="foto-back">
-</div>
+    <!-- KANAN -->
+    <div class="hero-image">
+        <img src="foto-back.png" alt="foto-back">
+    </div>
 
 </div>
 </section>
-
 <!-- ABOUT -->
 <section id="about" class="hidden">
 <div class="about-container container">
@@ -762,7 +756,6 @@ const observer = new IntersectionObserver((entries)=>{
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el)=>observer.observe(el));
 </script>
-
 </body>
 </html>
 
